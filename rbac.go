@@ -16,7 +16,7 @@ var (
 // RoleGetter must return the role of the user who made the request
 type RoleGetter func(buffalo.Context) (string, error)
 
-// New enables basic authentication
+// New enables cashbin rbac
 func New(e *casbin.Enforcer, r RoleGetter) buffalo.MiddlewareFunc {
 	return func(next buffalo.Handler) buffalo.Handler {
 		return func(c buffalo.Context) error {
