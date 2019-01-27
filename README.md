@@ -23,4 +23,4 @@ app.Use(rbac.New(authEnforcer, roleFunc))
 ```
 
 If you want a real example, check this project:
-https://github.com/kgosse/training/tree/master/golang/src/projects/shop
+https://github.com/kgosse/shop-back
