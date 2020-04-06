@@ -7,7 +7,7 @@ import (
 
 	"github.com/casbin/casbin"
 	"github.com/gobuffalo/buffalo"
-	rbac "github.com/kgosse/buffalo-mw-rbac"
+	rbac "github.com/herla97/buffalo-mw-rbac"
 	"github.com/markbates/willie"
 	"github.com/stretchr/testify/require"
 )
