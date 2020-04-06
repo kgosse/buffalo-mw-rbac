@@ -10,7 +10,7 @@ $ go get -u github.com/kgosse/buffalo-mw-rbac
 
 ```go
 // setup casbin auth rules
-authEnforcer, err := casbin.NewEnforcerSafe("rbac_model.conf", "rbac_policy.csv")
+authEnforcer, err := casbin.NewEnforcer("rbac_model.conf", "rbac_policy.csv")
 if err != nil {
   log.Fatal(err)
 }
