@@ -1,4 +1,4 @@
-module github.com/herla97/buffalo-mw-rbac
+module github.com/kgosse/buffalo-mw-rbac
 
 go 1.14
 
