@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-$ go get -u github.com/herla97/buffalo-mw-rbac
+$ go get -u github.com/kgosse/buffalo-mw-rbac
 ```
 
 ## Usage
