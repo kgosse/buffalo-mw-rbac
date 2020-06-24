@@ -23,5 +23,3 @@ roleFunc := func(c buffalo.Context) (string, error) {
 }
 app.Use(rbac.New(authEnforcer, roleFunc))
 ```
-
-This is forked from: https://github.com/kgosse/buffalo-mw-rbac
