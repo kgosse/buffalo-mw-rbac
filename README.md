@@ -9,11 +9,13 @@ $ go get -u github.com/kgosse/buffalo-mw-rbac
 ## Usage
 
 ```go
-// setup casbin auth rules
-authEnforcer, err := casbin.NewEnforcerSafe("rbac_model.conf", "rbac_policy.csv")
+// setup casbin auth rules.
+authEnforcer, err := casbin.NewEnforcer("rbac_model.conf", "rbac_policy.csv")
 if err != nil {
   log.Fatal(err)
 }
+
+// Create role func.
 roleFunc := func(c buffalo.Context) (string, error) {
   // implement your logic to get user's role
   role := "anonymous"
@@ -21,6 +23,3 @@ roleFunc := func(c buffalo.Context) (string, error) {
 }
 app.Use(rbac.New(authEnforcer, roleFunc))
 ```
-
-If you want a real example, check this project:
-https://github.com/kgosse/shop-back

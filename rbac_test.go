@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/casbin/casbin"
+	"github.com/casbin/casbin/v2"
 	"github.com/gobuffalo/buffalo"
 	rbac "github.com/kgosse/buffalo-mw-rbac"
 	"github.com/markbates/willie"
@@ -18,7 +18,7 @@ func initApp(r string) *buffalo.App {
 	}
 	a := buffalo.New(buffalo.Options{})
 	// setup casbin auth rules
-	authEnforcer, err := casbin.NewEnforcerSafe("./rbac_model.conf", "./rbac_policy.csv")
+	authEnforcer, err := casbin.NewEnforcer("./rbac_model.conf", "./rbac_policy.csv")
 	if err != nil {
 		log.Fatal(err)
 	}
